@@ -159,13 +159,62 @@
         </div>
     </section>
     <!-- End Hero -->
+    <section id="overlay">
+        <div class="container">
+            <style>
+                #overlay .container {
+                    position: relative;
+                    width: 50%;
+                }
+                
+                #overlay .image {
+                    display: block;
+                    width: 50%;
+                    height: auto;
+                }
+                
+                #overlay .overlay {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 100%;
+                    opacity: 0;
+                    transition: .5s ease;
+                    background-color: #008CBA;
+                }
+                
+                #overlay .container:hover .overlay {
+                    opacity: 1;
+                }
+                
+                .overlay .text {
+                    color: white;
+                    font-size: 20px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                }
+            </style>
+            <img src="assets/img/clients/square_link_4.png" alt="Avatar" class="image">
+            <div class="col-md-1">
+                <h2>OUR PRODUCTS</h2>
+            </div>
+            <div class="overlay">
+                <div class="text">TO BE A ROBUST FINANCIAL INSTITUTION TRASFORMING MEMBERS' LIVES THROUGH SUSTAINABLE GROWTH</div>
 
-
-
+            </div>
+        </div>
+    </section>
 
 
     <main id="main">
-
         <!-- ======= Featured Section ======= -->
         <section id="featured" class="featured">
             <div class="container">
@@ -190,7 +239,7 @@
                         <div class="icon-box">
                             <i class="bi bi-activity"></i>
                             <h3><a href="">OUR VALUES</a></h3>
-                            <p>Zoghori Sacco is built on the core ideologies of <br>ACCOUNTABILITY<br> COMMITMENT<br> HONESTY<br> INTEGRITY<br> INNOVATION<br> EFFICIENCY<br>TRANSPARENCY.</p>
+                            <p>Zoghori Sacco is built on the core ideologies of: <br>ACCOUNTABILITY<br> COMMITMENT<br> HONESTY<br> INTEGRITY<br> INNOVATION<br> EFFICIENCY<br>TRANSPARENCY.</p>
                         </div>
                     </div>
                 </div>
@@ -205,7 +254,7 @@
 
                 <div class="section-title">
                     <h2>OUR SERVICES</h2>
-                    <p>Check out the great services we offer</p>
+                    <!--<p>Check out the great services we offer</p>-->
                 </div>
 
                 <div class="row">
