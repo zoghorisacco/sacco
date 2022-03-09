@@ -2960,7 +2960,7 @@ section {
         margin-bottom: 0;
         font-weight: 500;
         font-size: 22px;
-        text-transform: capitalize;
+        text-transform: capitalize !important;
     }
     
     .entry-content blockquote::after {
