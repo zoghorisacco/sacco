@@ -165,11 +165,15 @@
         </section>
     </main>
 
+
+
+
+
     <form id="regForm" action="" autocomplete="on">
         <style>
             #regForm {
-                /*background-color: #ffffff;*/
-                background-image: url(./assets/img/blog/);
+                /*background-color: #C1BFBE;*/
+                /*background-image: url(./assets/img/blog/slide-3.jpg);*/
                 margin: 100px auto;
                 padding: 40px;
                 width: 70%;
@@ -218,10 +222,11 @@
             }
         </style>
         <div class="section-title">
-            <h2>MEMBERSHIP SELF-REGISTRATION</h2>
+            <h2>MEMBERSHIP E-REGISTRATION</h2>
         </div>
 
-        <div class="tab">PERSONAL DETAILS:
+        <div class="tab">
+            <h3 class="card-header text-black">PERSONAL DETAILS...</h3>
             <div class="user-details">
                 <div class="row">
                     <div class="input-box">
@@ -267,14 +272,35 @@
                         <span class="details">Other Phone No.</span>
                         <input type="tel" name="otherphone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" placeholder="0712-345-678" oninput="this.className = ''">
                     </div>
+                    <div class="input-box">
+                        <span class="details">Gender</span>
+                        <select name="gender" id="gender" required>
+                            <option selected> Choose Gender...</option>
+                                         <option value="M" oninput="this.className = ''">Male</option>
+                                         <option value="F" oninput="this.className = ''">Female</option>                 
+                                    </select>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Marital Status</span>
+                        <select name="marital" id="marital" required>
+                            <option selected> Choose Status...</option>
+                                         <option value="marital" oninput="this.className = ''">Single </option>
+                                         <option value="marital" oninput="this.className = ''">Married  </option>              
+                                         <option value="marital" oninput="this.className = ''">Divorcee </option>
+                                         <option value="marital" oninput="this.className = ''">Widow </option>     
+                                         <option value="marital" oninput="this.className = ''">Widower </option>                                       
+                                    </select
+                        ></div>
                 </div>
             </div>
+
+        </div>
         </div>
 
-        <div class="tab">Employment Details:
+        <div class="tab"><h3 class="card-header text-black">Employment Details:</h3>
             <div class="user-details">
                 <div class="input-box">
-                    <span class="details">Employer</span>
+                    <span class="details">Name of Employer</span>
                     <input type="text" name="employer" placeholder="Enter name of employer" oninput="this.className = ''" required>
                 </div>
                 <div class="input-box">
@@ -282,21 +308,13 @@
                     <input type="text" name="position" placeholder="Enter your position" oninput="this.className = ''">
                 </div>
                 <div class="input-box">
-                    <span class="details">Address</span>
+                    <span class="details">Address of Employer</span>
                     <input type="text" name="address" placeholder="Enter address of Employer" oninput="this.className = ''">
                 </div>
             </div>
-
-            <div class="input-box">
-                <span class="details">Gender</span>
-                <select name="gender" id="gender" required>
-                                 <option value="M" oninput="this.className = ''">Male</option>
-                                 <option value="F" oninput="this.className = ''">Female</option>                         
-                            </select>
-            </div>
         </div>
 
-        <div class="tab">Next Of Kin Details:
+        <div class="tab"><h3 class="card-header text-black">Next Of Kin Details:</h3>
             <div class="container1">
                 <button type="button" class="add_form_field">Add New Field &nbsp; 
                   <span style="font-size:16px; font-weight:bold;">+ </span>
@@ -328,160 +346,7 @@
                         })
                     });
                 </script>
-
             </div>
-
-
-
-
-            <!--<div class="table-responsive">
-                <div class="user-details">
-                    <table class="table table-dark table-striped">
-                        <thead>
-                            <tr>
-                                <th>Full Name</th>
-                                <th>Email</th>
-                                <th>Phone Number</th>
-                                <th>Verification Doc</th>
-                                <th>Relationship</th>
-                                <th>Percentage</th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="input-box">
-                                        <input type="text" name="fullname" class="form-control" placeholder="Full name">
-                                    </div>
-                                </td>
-
-                                <td>
-                                    <div class="input-box">
-                                        <input type="email" name="email" placeholder="Enter your email" required>
-                                    </div>
-                                </td>
-
-                                <td>
-                                    <div class="input-box">
-                                        <input type="tel" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" placeholder="0712-345-678">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-box">
-                                        <input type="text" name="verify" class="form-control" placeholder="Verification Doc">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-box">
-                                        <select name="nok" id="nok">
-                             <option value="Mother">Mother</option>
-                              <option value="Father">Father</option>
-                              <option value="Wife">Wife</option>
-                              <option value="Husband">Husband</option>
-                              <option value="Daughter">Daughter</option>
-                              <option value="Son">Son</option>
-                              <option value="Brother">Brother</option>
-                              <option value="Sister">Sister</option>                                           
-                            </select>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-box">
-                                        <input type="number" name="percent">
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="input-box">
-                                        <input type="text" name="fullname" class="form-control" placeholder="Full name" required>
-                                    </div>
-                                </td>
-
-                                <td>
-                                    <div class="input-box">
-                                        <input type="email" name="email" placeholder="Enter your email" required>
-                                    </div>
-                                </td>
-
-                                <td>
-                                    <div class="input-box">
-                                        <input type="tel" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" placeholder="0712-345-678" required>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-box">
-                                        <input type="text" name="verify" class="form-control" placeholder="Verification Doc" required>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-box">
-                                        <select name="nok" id="nok">
-                             <option value="Mother">Mother</option>
-                              <option value="Father">Father</option>
-                              <option value="Wife">Wife</option>
-                              <option value="Husband">Husband</option>
-                              <option value="Daughter">Daughter</option>
-                              <option value="Son">Son</option>
-                              <option value="Brother">Brother</option>
-                              <option value="Sister">Sister</option>                                           
-                            </select>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-box">
-                                        <input type="number" name="percent">
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="input-box">
-                                        <input type="text" name="fullname" class="form-control" placeholder="Full name" required>
-                                    </div>
-                                </td>
-
-                                <td>
-                                    <div class="input-box">
-                                        <input type="email" name="email" placeholder="Enter your email" required>
-                                    </div>
-                                </td>
-
-                                <td>
-                                    <div class="input-box">
-                                        <input type="tel" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" placeholder="0712-345-678" required>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-box">
-                                        <input type="text" name="verify" class="form-control" placeholder="Verification Doc" required>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-box">
-                                        <select name="nok" id="nok">
-                             <option value="Mother">Mother</option>
-                              <option value="Father">Father</option>
-                              <option value="Wife">Wife</option>
-                              <option value="Husband">Husband</option>
-                              <option value="Daughter">Daughter</option>
-                              <option value="Son">Son</option>
-                              <option value="Brother">Brother</option>
-                              <option value="Sister">Sister</option>                                           
-                            </select>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-box">
-                                        <input type="number" name="percent">
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>-->
         </div>
         <div class="tab">REFEREE'S DETAILS
             <div class="input-box">
@@ -490,6 +355,9 @@
             </div>
             <!--<p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
             <button type="submit" class="registerbtn">Register</button>-->
+            <label class="form-check-label" for="form2Example3g">
+                I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+              </label>
         </div>
 
         <div style="overflow:auto;">
@@ -499,7 +367,6 @@
             </div>
         </div>
 
-        <!-- Circles which indicates the steps of the form: -->
         <div style="text-align:center;margin-top:40px;">
             <span class="step"></span>
             <span class="step"></span>
@@ -665,50 +532,50 @@
                                                 <option value="F">Female</option>   
                                             </optgroup>
                                         </select>
+                    </div>
+                </div>
+                <div class="card-header text-black-100 text-center text-capitalize">Next of kin details</div>
+                <div class="table-responsive">
+                    <div class="user-details">
+                        <table class="table table-dark table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Full Name</th>
+                                    <th>Email</th>
+                                    <th>Phone Number</th>
+                                    <th>Verification Doc</th>
+                                    <th>Relationship</th>
+                                    <th>Percentage</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="input-box">
+                                            <input type="text" name="fullname" class="form-control" placeholder="Full name" required>
                                         </div>
-                                    </div>
-                                    <div class="card-header text-black-100 text-center text-capitalize">Next of kin details</div>
-                                    <div class="table-responsive">
-                                        <div class="user-details">
-                                            <table class="table table-dark table-striped">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Full Name</th>
-                                                        <th>Email</th>
-                                                        <th>Phone Number</th>
-                                                        <th>Verification Doc</th>
-                                                        <th>Relationship</th>
-                                                        <th>Percentage</th>
+                                    </td>
 
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="input-box">
-                                                                <input type="text" name="fullname" class="form-control" placeholder="Full name" required>
-                                                            </div>
-                                                        </td>
+                                    <td>
+                                        <div class="input-box">
+                                            <input type="email" name="email" placeholder="Enter your email" required>
+                                        </div>
+                                    </td>
 
-                                                        <td>
-                                                            <div class="input-box">
-                                                                <input type="email" name="email" placeholder="Enter your email" required>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="input-box">
-                                                                <input type="tel" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" placeholder="0712-345-678" required>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="input-box">
-                                                                <input type="text" name="verify" class="form-control" placeholder="Verification Doc" required>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="input-box">
-                                                                <select name="nok" id="nok">
+                                    <td>
+                                        <div class="input-box">
+                                            <input type="tel" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" placeholder="0712-345-678" required>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-box">
+                                            <input type="text" name="verify" class="form-control" placeholder="Verification Doc" required>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-box">
+                                            <select name="nok" id="nok">
                                              <option value="Mother">Mother</option>
                                               <option value="Father">Father</option>
                                               <option value="Wife">Wife</option>
@@ -718,31 +585,35 @@
                                               <option value="Brother">Brother</option>
                                               <option value="Sister">Sister</option>                                           
                                             </select>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="input-box">
-                                                                <input type="number" name="percent">
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
                                         </div>
-                                    </div>
-                                </form>
-                                <div class="button"><button class="btn btn-primary btn-lg" type="submit">APPLY</button></div>
-                            </div>
-                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-box">
+                                            <input type="number" name="percent">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <label class="form-check-label" for="form2Example3g">
+                                                I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                                              </label>
+                    </div>
                 </div>
-                </section>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
+
+    </form>
+    <div class="button"><button class="btn btn-primary btn-lg" type="submit">APPLY</button></div>
+    </div>
+    </div>
+    </div>
+    </section>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+    </div>
+    </div>
+    </div>
     </div>
 
 
